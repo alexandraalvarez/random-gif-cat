@@ -1,32 +1,39 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<div id="app" class="my-5">
+ 
+    <randomcat></randomcat>
+    
+</div>
 </template>
 
-<style lang="scss">
+<script>
+import randomcat from './components/RandomCat.vue'
+export default {
+    data() {
+        return {};
+    },
+    // computed: {},
+    methods: {
+        // -- Metodos
+    },
+    components: {
+        'randomcat': randomcat,
+    },
+
+}
+</script>
+
+<style>
+html{
+  background-color: lightblue;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  background-color: lightblue;
 }
 </style>
